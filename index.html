@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ludo Game with Snakes and Ladders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Ludo Game with Snakes and Ladders</h1>
+
+    <div class="game-container">
+        <div class="board" id="board"></div>
+
+        <div class="controls">
+            <div class="dice-container">
+                <h2>Roll the Dice</h2>
+                <button id="rollDiceBtn">Roll Dice</button>
+                <div id="diceResult">Roll to Start</div>
+            </div>
+
+            <div class="players-info">
+                <div class="player" id="player1-info">
+                    <h3>Player 1 (Red)</h3>
+                    <div class="piece red-piece" id="player1-piece"></div>
+                </div>
+
+                <div class="player" id="player2-info">
+                    <h3>Player 2 (Blue)</h3>
+                    <div class="piece blue-piece" id="player2-piece"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

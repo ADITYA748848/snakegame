@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+.board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    gap: 2px;
+    border: 2px solid #333;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    position: relative;
+    font-size: 14px;
+}
+
+.cell:nth-child(odd) {
+    background-color: #ddd;
+}
+
+.snake {
+    background-color: red;
+    color: orange;
+}
+
+.ladder {
+    background-color: green;
+    color: white;
+}
+
+.piece {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+}
+
+.red-piece {
+    background-color: red;
+}
+
+.blue-piece {
+    background-color: blue;
+}
+
+.dice-container {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: brown;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #655;
+}
+
+#diceResult {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Ladder from Cell 4 to Cell 14 */
+.ladder-4-14::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 160px;
+    background-color: green;
+    top: 10px;
+    left: 0px;
+    transform: rotate(20deg);
+    z-index: 1;
+}
+
+/* Ladder from Cell 9 to Cell 31 */
+.ladder-9-31::before {
+    content: ' ';
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    background-color: purple;
+    top: 160px;
+    left: 5px;
+    transform: rotate(30deg);
+    z-index: 1;
+}
+
+/* Snake from Cell 16 to Cell 6 */
+.snake-16-6::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 150px;
+    background-color: red;
+    top: 120px;
+    left: 20px;
+    border-radius: 20%;
+    transform: rotate(30deg);
+    z-index: 10;
+}
+
+/* Snake from Cell 47 to Cell 26 */
+.snake-47-26::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 180px;
+    background-color: orange;
+    top: 100px;
+    left: 30px;
+    border-radius: 30%;
+    transform: rotate(30deg);
+     background-color: orange;
+    z-index: 130;
+}
